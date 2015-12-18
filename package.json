@@ -1,0 +1,22 @@
+{
+  "name": "N1-Markdown-Composer",
+  "version": "0.1.0",
+  "main": "./lib/main",
+  "title": "Markdown",
+  "description": "Write emails using markdown!",
+  "license": "GPL-3.0",
+  "engines": {
+    "nylas": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nylas/N1-Markdown-Composer"
+  },
+  "windowTypes": {
+    "default": true,
+    "composer": true
+  },
+  "dependencies": {
+    "marked": "^0.3"
+  }
+}
