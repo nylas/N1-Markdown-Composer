@@ -1,9 +1,11 @@
 
-## N1 Markdown Composer
+# N1 Markdown Composer
 
 A plugin for N1 that allows you to compose emails using markdown.
 
-#### Install this plugin:
+![Markdown Screenshot](/assets/markdown_screenshot.png?raw=true "Markdown Composer")
+
+## Install this plugin:
 
 1. Download and run N1
 
@@ -16,6 +18,6 @@ A plugin for N1 that allows you to compose emails using markdown.
    > and N1 runs `apm install` on the command line to fetch dependencies
    > listed in the package's `package.json`
 
-### Usage
+## Usage
 
 Just write emails using markdown.
