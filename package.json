@@ -5,6 +5,7 @@
   "title": "Markdown",
   "description": "Write emails using markdown!",
   "license": "GPL-3.0",
+  "icon": "./icon.png",
   "engines": {
     "nylas": "*"
   },
