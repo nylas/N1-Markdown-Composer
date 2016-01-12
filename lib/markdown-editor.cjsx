@@ -32,6 +32,9 @@ class MarkdownEditor extends React.Component
     @mde.codemirror.focus()
     @mde.codemirror.execCommand('goDocEnd')
 
+  nativeFocus: =>
+    @focus()
+
   getCurrentSelection: ->
 
   getPreviousSelection: ->
