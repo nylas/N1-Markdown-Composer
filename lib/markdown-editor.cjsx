@@ -1,6 +1,8 @@
+_ = require 'underscore'
 Utils = require './utils'
 SimpleMDE = require 'simplemde'
-{React} = require 'nylas-exports'
+React = require 'react'
+ReactDOM = require 'react-dom'
 
 # Keep a file-scope variable containing the contents of the markdown stylesheet.
 # This will be embedded in the markdown preview iFrame, as well as the email body.
@@ -12,13 +14,11 @@ class MarkdownEditor extends React.Component
 
   @propTypes:
     body: React.PropTypes.string.isRequired,
-    onFocus: React.PropTypes.func.isRequired,
     onBodyChanged: React.PropTypes.func.isRequired,
 
   componentDidMount: =>
-    textarea = React.findDOMNode(@refs.textarea)
+    textarea = ReactDOM.findDOMNode(@refs.textarea)
     @mde = new SimpleMDE(element: textarea, hideIcons: ['fullscreen'])
-    @mde.codemirror.on "focus", @props.onFocus
     @mde.codemirror.on "change", @_onBodyChanged
     @mde.value(Utils.getTextFromHtml(@props.body))
 
@@ -42,14 +42,15 @@ class MarkdownEditor extends React.Component
   _onDOMMutated: ->
 
   _onBodyChanged: =>
-    @props.onBodyChanged(target: {value: @mde.value()})
+    _.defer =>
+      @props.onBodyChanged(target: {value: @mde.value()})
 
   render: ->
     <div className="markdown-editor">
        <textarea
-         className="editing-region"
          ref="textarea"
-         onFocus={@props.onFocus} />
+         className="editing-region"
+        />
     </div>
 
 module.exports = MarkdownEditor
