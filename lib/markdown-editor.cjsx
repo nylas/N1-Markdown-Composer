@@ -1,8 +1,9 @@
 _ = require 'underscore'
 Utils = require './utils'
 SimpleMDE = require 'simplemde'
-React = require 'react'
-ReactDOM = require 'react-dom'
+nylas = require 'nylas-exports'
+React = nylas.React
+ReactDOM = nylas.ReactDOM
 
 # Keep a file-scope variable containing the contents of the markdown stylesheet.
 # This will be embedded in the markdown preview iFrame, as well as the email body.

@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "simplemde": "jstejada/simplemde-markdown-editor",
-    "marked": "^0.3"
+    "marked": "^0.3",
+    "underscore": "^1.8"
   }
 }
