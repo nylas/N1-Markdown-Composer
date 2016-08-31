@@ -3,7 +3,8 @@
 
 A plugin for N1 that allows you to compose emails using markdown.
 
-![Markdown Screenshot](/assets/markdown_screenshot.png?raw=true "Markdown Composer")
+![Markdown Screenshot Editing](/assets/markdown_screenshot_edit.png?raw=true "Markdown Composer")
+![Markdown Screenshot Preview](/assets/markdown_screenshot_preview.png?raw=true "Markdown Composer")
 
 ## Install this plugin:
 
