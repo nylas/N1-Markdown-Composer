@@ -18,8 +18,7 @@
     "composer": true
   },
   "dependencies": {
-    "simplemde": "jstejada/simplemde-markdown-editor",
     "marked": "^0.3",
-    "underscore": "^1.8"
+    "simplemde": "^1.11.2"
   }
 }
